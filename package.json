@@ -1,25 +1,36 @@
 {
-  "name": "hotel-care-crm",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "2.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "hotel-care-crm",
+	"version": "0.1.0",
+	"private": true,
+	"main": "public/electron.js",
+	"dependencies": {
+		"@material-ui/core": "^3.7.1",
+		"@material-ui/icons": "^3.0.1",
+		"concurrently": "^4.1.0",
+		"electron": "^4.0.0",
+		"electron-builder": "^20.38.4",
+		"electron-is-dev": "^1.0.1",
+		"react": "^16.7.0",
+		"react-dom": "^16.7.0",
+		"react-loading-screen": "0.0.17",
+		"react-router-dom": "^4.3.1",
+		"react-scripts": "2.1.1",
+		"wait-on": "^3.2.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"electron-dev": "concurrently \"SET BROWSER=none&&npm run start\" \"wait-on http://localhost:3000 && electron .\""
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }
